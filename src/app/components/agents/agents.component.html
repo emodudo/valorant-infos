@@ -1,0 +1,7 @@
+<div>
+    <div *ngFor="let agent of agents">
+      <h2>{{ agent.displayName }}</h2>
+      <p>{{ agent.description }}</p>
+      <img [src]="agent.displayIcon" alt="{{ agent.displayName }}">
+    </div>
+  </div>
