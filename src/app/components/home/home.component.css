@@ -1,0 +1,9 @@
+.card-home {
+    width: 350px;
+}
+
+.card-image {
+    object-fit:cover;
+    height: 754px;
+}
+
