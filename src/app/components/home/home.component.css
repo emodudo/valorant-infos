@@ -1,9 +1,9 @@
 .card-home {
-    width: 350px;
+    width: 20rem;
+    border-color: black;
 }
 
 .card-image {
+    height: 47rem;
     object-fit:cover;
-    height: 754px;
 }
-
