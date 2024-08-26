@@ -12,7 +12,7 @@
 .card-home {
     position: relative;
     width: 20rem;
-    border: 1px solid black;
+    border: 3px solid rgb(32, 27, 41);
     overflow: hidden;
     transition: transform 0.3s ease;
 }
@@ -30,7 +30,7 @@
 
 .card-home:hover .card-image {
     filter: blur(4px) brightness(0.7);
-    transform: scale(1.15);
+    transform: scale(1.10);
 }
 
 .overlay {
