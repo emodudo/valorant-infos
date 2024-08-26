@@ -5,7 +5,6 @@ import { AgentsComponent } from '../app/components/agents/agents.component';
 import { MapsComponent } from './components/maps/maps.component';
 import { WeaponsComponent } from './components/weapons/weapons.component';
 import { AgentInfoComponent } from './components/agent-info/agent-info.component';
-import { MapInfoComponent } from './components/map-info/map-info.component';
 
 
 const routes: Routes = [
@@ -15,7 +14,6 @@ const routes: Routes = [
   { path: 'maps', component: MapsComponent },
   { path: 'weapons', component: WeaponsComponent },
   { path: 'agent-info/:name', component: AgentInfoComponent },
-  { path: 'map-info/:name', component: MapInfoComponent }, 
   { path: '**', redirectTo: '/agents' } // Rota padrão
 ];
 

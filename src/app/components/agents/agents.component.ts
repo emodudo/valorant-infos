@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'; // Importa o Router
+import { Router } from '@angular/router'; 
 import { ValorantService } from '../../services/valorant.service'; 
 
 @Component({

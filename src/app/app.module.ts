@@ -10,8 +10,6 @@ import { WeaponsComponent } from './components/weapons/weapons.component';
 import { MapsComponent } from './components/maps/maps.component';
 import { HomeComponent } from './components/home/home.component';
 import { AgentInfoComponent } from './components/agent-info/agent-info.component';
-import { MapInfoComponent } from './components/map-info/map-info.component';
-import { WeaponInfoComponent } from './components/weapon-info/weapon-info.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +20,6 @@ import { WeaponInfoComponent } from './components/weapon-info/weapon-info.compon
     MapsComponent,
     HomeComponent,
     AgentInfoComponent,
-    MapInfoComponent,
-    WeaponInfoComponent
   ],
   imports: [
     BrowserModule,
