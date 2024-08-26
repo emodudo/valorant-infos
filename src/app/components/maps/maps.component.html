@@ -1,1 +1,12 @@
-<p>maps works!</p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let map of maps" class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img [src]="map.splash" class="card-img-top" alt="{{ map.displayName }}">
+          <div class="card-body">
+            <h5 class="card-title button-text">{{ map.displayName }}</h5>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

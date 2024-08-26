@@ -16,5 +16,18 @@ export class ValorantService {
     return this.http.get<any>(url);
   }
 
-  // Adicione mais métodos conforme necessário para outras endpoints da API
+  getAgentById(id: string): Observable<any> {
+    const url = `${this.baseUrl}/agents/${id}`;  // URL completa para obter um agente específico pelo ID
+    return this.http.get<any>(url);
+  }
+  
+  getMaps(): Observable<any> {
+    const url = `${this.baseUrl}/maps`;  
+    return this.http.get<any>(url);
+  }
+
+  getMapById(id: string): Observable<any> {
+    const url = `${this.baseUrl}/maps/${id}`;  // URL completa para obter um agente específico pelo ID
+    return this.http.get<any>(url);
+  }
 }

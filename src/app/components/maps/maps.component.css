@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('../../../assets/fonte.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.button-text {
+    font-family: 'MinhaFonte', sans-serif;
+}

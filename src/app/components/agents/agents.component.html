@@ -1,7 +1,11 @@
-<div>
+<div class="container">
+  <div class="d-flex flex-wrap">
     <div *ngFor="let agent of agents">
-      <h2>{{ agent.displayName }}</h2>
-      <p>{{ agent.description }}</p>
-      <img [src]="agent.displayIcon" alt="{{ agent.displayName }}">
-    </div>
+      <a [routerLink]="['/agent-info', agent.displayName]">
+        <div class="card m-2 bg-dark" style="width: 25rem;">
+          <img [src]="agent.displayIcon" alt="{{ agent.displayName }}">
+        </div>
+      </a>
   </div>
+</div>
+</div>
