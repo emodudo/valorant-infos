@@ -1,17 +1,24 @@
-<div class="container">
-  <div *ngIf="agent">
+<div class="container d-flex align-items-start">
+  <!-- Container para a Imagem do Agente -->
+  <div class="agent-image-container">
+    <img [src]="agent.fullPortrait" alt="{{ agent.displayName }}" class="img-fluid">
+  </div>
+
+  <!-- Container para as Informações do Agente -->
+  <div class="agent-info-container ms-4">
     <h1>{{ agent.displayName }}</h1>
     <div *ngIf="agent.role" class="d-flex align-items-center mb-3">
-      <img [src]="agent.role.displayIcon" alt="{{ agent.role.displayName }}" class="me-2" style="width: 50px; height: 50px;">
+      <img [src]="agent.role.displayIcon" alt="{{ agent.role.displayName }}" class="me-3" style="width: 50px; height: 50px;">
       <div>
         <h4 class="mb-1">{{ agent.role.displayName }}</h4>
         <p class="mb-0">{{ agent.role.description }}</p>
       </div>
     </div>
-    <img [src]="agent.fullPortrait" alt="{{ agent.displayName }}" class="img-fluid">
     <p>{{ agent.description }}</p>
-    <div class="row">
-      <div class="col-md-6 col-lg-4" *ngFor="let ability of agent.abilities">
+
+    <!-- Container para as Abilities -->
+    <div class="abilities-container d-flex flex-wrap">
+      <div class="ability-card" *ngFor="let ability of agent.abilities">
         <div class="card mb-3">
           <img [src]="ability.displayIcon" class="card-img-top" alt="{{ ability.displayName }}">
           <div class="card-body">
