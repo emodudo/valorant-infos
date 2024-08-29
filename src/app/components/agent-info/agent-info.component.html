@@ -1,12 +1,9 @@
 <div class="container d-flex align-items-start">
-  <!-- Container para a Imagem do Agente -->
   <div class="agent-image-container">
     <img [src]="agent.fullPortrait" alt="{{ agent.displayName }}" class="img-fluid">
   </div>
-
-  <!-- Container para as Informações do Agente -->
   <div class="agent-info-container ms-4">
-    <h1>{{ agent.displayName }}</h1>
+    <h1 class="button-text">{{ agent.displayName }}</h1>
     <div *ngIf="agent.role" class="d-flex align-items-center mb-3">
       <img [src]="agent.role.displayIcon" alt="{{ agent.role.displayName }}" class="me-3" style="width: 50px; height: 50px;">
       <div>
@@ -15,8 +12,6 @@
       </div>
     </div>
     <p>{{ agent.description }}</p>
-
-    <!-- Container para as Abilities -->
     <div class="abilities-container d-flex flex-wrap">
       <div class="ability-card" *ngFor="let ability of agent.abilities">
         <div class="card mb-3">

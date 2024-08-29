@@ -1,21 +1,32 @@
+@font-face {
+  font-family: 'MinhaFonte';
+  src: url('../../../assets/fonte.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.button-text {
+  font-family: 'MinhaFonte', sans-serif;
+}
+
 .container {
   display: flex;
-  align-items: center; /* Centraliza verticalmente */
+  align-items: center; 
   flex-wrap: wrap;
   padding: 1rem;
 }
 
 .agent-image-container {
   flex: 1;
-  max-width: 40%; /* Controle do tamanho da imagem */
+  max-width: 40%; 
   margin-right: 2rem; 
   display: flex;
-  justify-content: center; /* Centraliza a imagem horizontalmente dentro do container */
+  justify-content: center; 
 }
 
 .agent-image-container img {
-  max-width: 180%; /* Garante que a imagem não exceda o tamanho do container */
-  height: auto; /* Mantém a proporção da imagem */
+  max-width: 180%; 
+  height: auto; 
   align-items: center;
 }
 
@@ -27,12 +38,12 @@
 .abilities-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem; /* Espaço entre os cards */
+  gap: 1rem; 
 }
 
 .ability-card {
-  flex: 1 1 calc(25% - 1rem); /* Tamanho fixo dos cards */
-  max-width: 200px; /* Largura máxima dos cards */
+  flex: 1 1 calc(25% - 1rem); 
+  max-width: 200px; 
 }
 
 .card {
