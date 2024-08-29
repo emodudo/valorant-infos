@@ -1,9 +1,25 @@
 <div class="container">
-    <div *ngIf="agent">
-      <h1>{{ agent.displayName }}</h1>
-      <img [src]="agent.fullPortrait" alt="{{ agent.displayName }}">
-      <p>{{ agent.description }}</p>
-      <!-- Outras informações do agente -->
+  <div *ngIf="agent">
+    <h1>{{ agent.displayName }}</h1>
+    <div *ngIf="agent.role" class="d-flex align-items-center mb-3">
+      <img [src]="agent.role.displayIcon" alt="{{ agent.role.displayName }}" class="me-2" style="width: 50px; height: 50px;">
+      <div>
+        <h4 class="mb-1">{{ agent.role.displayName }}</h4>
+        <p class="mb-0">{{ agent.role.description }}</p>
+      </div>
+    </div>
+    <img [src]="agent.fullPortrait" alt="{{ agent.displayName }}" class="img-fluid">
+    <p>{{ agent.description }}</p>
+    <div class="row">
+      <div class="col-md-6 col-lg-4" *ngFor="let ability of agent.abilities">
+        <div class="card mb-3">
+          <img [src]="ability.displayIcon" class="card-img-top" alt="{{ ability.displayName }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ ability.displayName }}</h5>
+            <p class="card-text">{{ ability.description }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
+</div>

@@ -1,11 +1,11 @@
-<div class="container">
-  <div class="d-flex flex-wrap">
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 90vh;">
+  <div class="d-flex flex-wrap justify-content-center">
     <div *ngFor="let agent of agents">
       <a [routerLink]="['/agent-info', agent.displayName]">
-        <div class="card m-2 bg-dark" style="width: 25rem;">
+        <div class="card m-2 bg-dark" style="width: 8rem;">
           <img [src]="agent.displayIcon" alt="{{ agent.displayName }}">
         </div>
       </a>
+    </div>
   </div>
-</div>
 </div>

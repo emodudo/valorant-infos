@@ -1,0 +1,8 @@
+.card {
+    transition: border 0.2s ease;
+  }
+  
+  .card:hover {
+    border: 3px solid white; 
+  }
+  
