@@ -1,12 +1,17 @@
 <div class="container">
   <div class="row pt-3">
     <div *ngFor="let map of maps" class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img [src]="map.splash" class="card-img-top" alt="{{ map.displayName }}">
-          <div class="card-body">
-            <h5 class="card-title button-text">{{ map.displayName }}</h5>
+      <div class="card h-100 position-relative">
+        <div *ngIf="!map.loaded" class="d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
           </div>
         </div>
+        <img [src]="map.splash" (load)="onImageLoad(map)" class="card-img-top" alt="{{ map.displayName }}">
+        <div class="card-body">
+          <h5 class="card-title button-text">{{ map.displayName }}</h5>
+        </div>
+      </div>
     </div>
   </div>
 </div>
