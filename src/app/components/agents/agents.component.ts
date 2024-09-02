@@ -20,6 +20,6 @@ export class AgentsComponent implements OnInit {
   }
 
   viewAgentInfo(agentId: string): void {
-    this.router.navigate(['/agent-info', agentId]); // Navega para a rota de detalhes do agente
+    this.router.navigate(['/agent-info', agentId]); 
   }
 }

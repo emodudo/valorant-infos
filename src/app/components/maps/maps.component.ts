@@ -13,14 +13,17 @@ export class MapsComponent implements OnInit {
   constructor(private valorantService: ValorantService, private router: Router) { }
 
   ngOnInit(): void {
+    const excludedMapNames = ['The Range', 'Basic Training']; 
+  
     this.valorantService.getMaps().subscribe(data => {
       console.log('Dados recebidos:', data);
-      this.maps = data.data.map((map: any) => ({ ...map, loaded: false }));
+      this.maps = data.data
+        .filter((map: any) => !excludedMapNames.includes(map.displayName) && map.displayName)
+        .map((map: any) => ({ ...map, loaded: false }));
     },
-      error => {
-        console.error('Erro ao buscar os mapas:', error);
-      }
-    );
+    error => {
+      console.error('Erro ao buscar os mapas:', error);
+    });
   }
 
   onImageLoad(map: any): void {

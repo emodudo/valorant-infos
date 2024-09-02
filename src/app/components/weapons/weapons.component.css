@@ -1,0 +1,10 @@
+.weaponimage {
+    height: 150px;
+    width: 20rem;
+    border-radius: 5px;
+    border: 10px solid transparent;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: contain;
+}

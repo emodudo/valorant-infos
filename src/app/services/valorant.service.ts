@@ -7,17 +7,17 @@ import { Observable } from 'rxjs';
 })
 export class ValorantService {
 
-  private baseUrl: string = 'https://valorant-api.com/v1';  // URL base da API
+  private baseUrl: string = 'https://valorant-api.com/v1'; 
 
   constructor(private http: HttpClient) { }
 
   getAgents(): Observable<any> {
-    const url = `${this.baseUrl}/agents`;  // URL completa para obter os agentes
+    const url = `${this.baseUrl}/agents?isPlayableCharacter=true`; 
     return this.http.get<any>(url);
   }
 
   getAgentById(id: string): Observable<any> {
-    const url = `${this.baseUrl}/agents/${id}`;  // URL completa para obter um agente específico pelo ID
+    const url = `${this.baseUrl}/agents/${id}`; 
     return this.http.get<any>(url);
   }
   
@@ -26,8 +26,9 @@ export class ValorantService {
     return this.http.get<any>(url);
   }
 
-  getMapById(id: string): Observable<any> {
-    const url = `${this.baseUrl}/maps/${id}`;  // URL completa para obter um agente específico pelo ID
+  getWeapons(): Observable<any> {
+    const url = `${this.baseUrl}/weapons`;  
     return this.http.get<any>(url);
   }
+
 }
